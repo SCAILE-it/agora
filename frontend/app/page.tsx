@@ -68,7 +68,8 @@ export default function Home() {
       });
 
     // Fetch available agents
-    fetch("http://localhost:8000/agents")
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+    fetch(`${apiUrl}/agents`)
       .then((res) => res.json())
       .then((data) => {
         if (data.agents) {

@@ -1,0 +1,6 @@
+backend/
+docker-compose.yml
+.env
+*.db
+__pycache__/
+*.pyc
